@@ -1,866 +1,878 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-28T01:04:27.998729" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Payment To User" source="I:\CYCLOS\CYCLOS-PROJECT\PilotProject_Cyclos_Team1\TestCases\test_payment_to_user.robot">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-28T15:42:17.960274" rpa="false" schemaversion="5">
+<suite id="s1" name="Test User Payment" source="I:\CYCLOS\CYCLOS-PROJECT\PilotProject_Cyclos_Team1\TestCases\test_user_payment.robot">
 <test id="s1-t1" name="To validate payment to user functionality with valid data" line="12">
 <kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:28.951637" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-05-28T15:42:19.335727" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-28T01:04:28.951637" elapsed="8.106492"/>
+<status status="PASS" start="2024-05-28T15:42:19.335727" elapsed="10.145343"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:37.059130" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<msg time="2024-05-28T15:42:29.482075" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-28T01:04:37.059130" elapsed="7.171853"/>
+<status status="PASS" start="2024-05-28T15:42:29.482075" elapsed="9.496037"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-28T01:04:44.230983" elapsed="0.354132"/>
+<status status="PASS" start="2024-05-28T15:42:38.978112" elapsed="1.425213"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-28T01:04:44.585115" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-28T15:42:40.403325" elapsed="0.005935"/>
 </kw>
-<status status="PASS" start="2024-05-28T01:04:28.951637" elapsed="15.633478"/>
+<status status="PASS" start="2024-05-28T15:42:19.300480" elapsed="21.108780"/>
 </kw>
 <kw name="Fill the Login page" owner="LoginResource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login_button}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:04:44.601746" elapsed="4.865994"/>
+<status status="PASS" start="2024-05-28T15:42:40.454461" elapsed="4.983570"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:49.467740" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
+<msg time="2024-05-28T15:42:45.438031" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
 <arg>${login_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:04:49.467740" elapsed="1.067030"/>
+<status status="PASS" start="2024-05-28T15:42:45.438031" elapsed="3.867686"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${username_locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:04:50.534770" elapsed="0.140633"/>
+<status status="PASS" start="2024-05-28T15:42:49.305717" elapsed="0.290786"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:50.675403" level="INFO">Typing text 'demo' into text field 'css:input[placeholder="User"]'.</msg>
+<msg time="2024-05-28T15:42:49.596503" level="INFO">Typing text 'demo' into text field 'css:input[placeholder="User"]'.</msg>
 <arg>${username_locator}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:04:50.675403" elapsed="0.453157"/>
+<status status="PASS" start="2024-05-28T15:42:49.596503" elapsed="0.619982"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${password_locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:04:51.128560" elapsed="0.140634"/>
+<status status="PASS" start="2024-05-28T15:42:50.216485" elapsed="0.078130"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:51.269194" level="INFO">Typing text '1234' into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-05-28T15:42:50.294615" level="INFO">Typing text '1234' into text field 'css:input[placeholder="Password"]'.</msg>
 <arg>${password_locator}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:04:51.269194" elapsed="0.343772"/>
+<status status="PASS" start="2024-05-28T15:42:50.294615" elapsed="1.161923"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${submit_btn}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:04:51.612966" elapsed="0.062507"/>
+<status status="PASS" start="2024-05-28T15:42:51.456538" elapsed="0.109383"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:51.675473" level="INFO">Clicking element 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<msg time="2024-05-28T15:42:51.581548" level="INFO">Clicking element 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
 <arg>${submit_btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:04:51.675473" elapsed="0.341179"/>
+<status status="PASS" start="2024-05-28T15:42:51.581548" elapsed="0.125007"/>
 </kw>
-<status status="PASS" start="2024-05-28T01:04:44.601746" elapsed="7.414906"/>
+<arg>demo</arg>
+<arg>1234</arg>
+<status status="PASS" start="2024-05-28T15:42:40.424271" elapsed="11.282284"/>
 </kw>
 <kw name="Click the Banking Option" owner="HomeResource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Banking_Xpath}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:04:52.139790" elapsed="1.825711"/>
+<status status="PASS" start="2024-05-28T15:42:51.753433" elapsed="1.621684"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:53.966504" level="INFO">Clicking element 'xpath://a[@id='menu_banking']'.</msg>
+<msg time="2024-05-28T15:42:53.375117" level="INFO">Clicking element 'xpath://a[@id='menu_banking']'.</msg>
 <arg>${Banking_Xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:04:53.965501" elapsed="0.405063"/>
+<status status="PASS" start="2024-05-28T15:42:53.375117" elapsed="0.758808"/>
 </kw>
-<status status="PASS" start="2024-05-28T01:04:52.138788" elapsed="2.231776"/>
+<status status="PASS" start="2024-05-28T15:42:51.753433" elapsed="2.380492"/>
 </kw>
 <kw name="Verify the Banking page is displayed" owner="HomeResource">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:54.370564" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
+<msg time="2024-05-28T15:42:54.227683" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
 <arg>${Banking_page_verify}</arg>
 <arg>${Banking_page_keyword}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T01:04:54.370564" elapsed="0.375766"/>
+<status status="PASS" start="2024-05-28T15:42:54.227683" elapsed="1.659551"/>
 </kw>
-<status status="PASS" start="2024-05-28T01:04:54.370564" elapsed="0.376771"/>
+<status status="PASS" start="2024-05-28T15:42:54.227683" elapsed="1.659551"/>
 </kw>
 <kw name="Select the option payment to user" owner="PaymentUser">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:43:01.790768" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-28T15:43:01.790768" level="FAIL">Element 'xpath://div[text()="Payment to user"]' not visible after 5 seconds.</msg>
 <arg>${select_payment_to_user}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:04:54.748333" elapsed="1.392532"/>
+<status status="FAIL" start="2024-05-28T15:42:56.215379" elapsed="5.589684">Element 'xpath://div[text()="Payment to user"]' not visible after 5 seconds.</status>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:56.140865" level="INFO">Clicking element 'xpath://div[text()="Payment to user"]'.</msg>
 <arg>${select_payment_to_user}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:04:56.140865" elapsed="0.512961"/>
+<status status="NOT RUN" start="2024-05-28T15:43:01.805063" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-28T01:04:54.748333" elapsed="1.905493"/>
+<status status="FAIL" start="2024-05-28T15:42:56.215379" elapsed="5.589684">Element 'xpath://div[text()="Payment to user"]' not visible after 5 seconds.</status>
 </kw>
 <kw name="verify the payment to user page open" owner="PaymentUser">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:56.901465" level="INFO">Verifying element 'xpath://div[@class="content-title d-flex"]//div' contains exact text 'Payment to user'.</msg>
-<arg>${payment_user_title}</arg>
-<arg>Payment to user</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T01:04:56.889187" elapsed="2.250544"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:04:56.889187" elapsed="2.250544"/>
+<status status="NOT RUN" start="2024-05-28T15:43:01.805063" elapsed="0.000000"/>
 </kw>
 <kw name="Enter the username in the to user field" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:59.217860" level="INFO">Typing text 'demo' into text field 'xpath://input[@placeholder="Type to search"]'.</msg>
-<arg>${to_User}</arg>
 <arg>${user_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:04:59.217860" elapsed="0.597530"/>
-</kw>
-<arg>${user_name}</arg>
-<status status="PASS" start="2024-05-28T01:04:59.217860" elapsed="0.598535"/>
+<status status="NOT RUN" start="2024-05-28T15:43:01.805063" elapsed="0.000000"/>
 </kw>
 <kw name="Select the user" owner="PaymentUser">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:04:59.831387" level="INFO">Clicking element 'xpath://div[@role='listbox']/a[text()=' Demo one ']'.</msg>
-<arg>${user_select}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:04:59.831387" elapsed="2.899327"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:04:59.829699" elapsed="2.902009"/>
+<status status="NOT RUN" start="2024-05-28T15:43:01.805063" elapsed="0.000000"/>
 </kw>
 <kw name="Enter the valid amount in the amount field" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:02.798037" level="INFO">Typing text '10' into text field 'xpath://div[@class="input-group"]//input'.</msg>
-<arg>${amount}</arg>
 <arg>${amount_data}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:02.797038" elapsed="1.153839"/>
-</kw>
-<arg>${amount_data}</arg>
-<status status="PASS" start="2024-05-28T01:05:02.796038" elapsed="1.154839"/>
+<status status="NOT RUN" start="2024-05-28T15:43:01.820074" elapsed="0.000000"/>
 </kw>
 <kw name="Click the scheduling dropdown button" owner="PaymentUser">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:04.355934" level="INFO">Clicking element 'xpath://button[@class='form-control text-left custom-select w-100']'.</msg>
-<arg>${Scheduling}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:04.340308" elapsed="1.438812"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:04.340308" elapsed="1.438812"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.338313" elapsed="0.000996"/>
 </kw>
 <kw name="Click the monthly installment option" owner="PaymentUser">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:05.810370" level="INFO">Clicking element 'xpath://div[@role='listbox']//a[text()=' Monthly installments ']'.</msg>
-<arg>${monthly_inst_option}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:05.810370" elapsed="0.616064"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:05.810370" elapsed="0.616064"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.341310" elapsed="0.000000"/>
 </kw>
 <kw name="Fill the no of installments" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:06.871253" level="INFO">Typing text '5' into text field 'xpath://div[@class='d-flex label-value-value']//input[@type='number']'.</msg>
-<arg>${no_of_installments}</arg>
-<arg>${no_of_installments_data}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:06.871253" elapsed="1.210378"/>
-</kw>
 <arg>${inst_no}</arg>
-<status status="PASS" start="2024-05-28T01:05:06.871253" elapsed="1.210378"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.342908" elapsed="0.000000"/>
 </kw>
 <kw name="Click the first installment" owner="PaymentUser">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:08.316018" level="INFO">Clicking element 'xpath://label[@class='custom-control-label' and text()=' Future date ']'.</msg>
-<arg>${first_instal}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:08.316018" elapsed="0.797600"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:08.316018" elapsed="0.797600"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.342908" elapsed="0.000000"/>
 </kw>
 <kw name="Fill the future date" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:09.113618" level="INFO">Typing text '30-05-2024' into text field 'xpath://div[@class='d-flex label-value-value']//input[@type='date']'.</msg>
-<arg>${future_date}</arg>
 <arg>${fut_date}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:09.113618" elapsed="0.777072"/>
-</kw>
-<arg>${fut_date}</arg>
-<status status="PASS" start="2024-05-28T01:05:09.113618" elapsed="0.777072"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.342908" elapsed="0.000000"/>
 </kw>
 <kw name="Fill the description" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:09.995223" level="INFO">Typing text 'Monthly Installments' into text field 'xpath://div[@class='d-flex label-value-value']//textarea'.</msg>
-<arg>${descrip_xpath}</arg>
 <arg>${description}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:09.994223" elapsed="0.968828"/>
-</kw>
-<arg>${description}</arg>
-<status status="PASS" start="2024-05-28T01:05:09.994223" elapsed="0.968828"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.342908" elapsed="0.000000"/>
 </kw>
 <kw name="Click the next Button in payment page" owner="PaymentUser">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${next}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:10.965052" elapsed="0.064594"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:11.029646" level="INFO">Clicking element 'xpath://span[text()='Next']'.</msg>
-<arg>${next}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:11.029646" elapsed="0.390904"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:10.964050" elapsed="0.456500"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.342908" elapsed="0.000000"/>
 </kw>
 <kw name="Verify the confirmation page is displayed" owner="PaymentUser">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:12.662406" level="INFO">Element 'xpath://div[text()=' Payment confirmation ']' is displayed.</msg>
-<arg>${pay_confirm_title}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:11.436800" elapsed="1.225606"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:11.420550" elapsed="1.241856"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.342908" elapsed="0.000000"/>
 </kw>
 <kw name="Click the confirm button in the payment page" owner="PaymentUser">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${confirm_button}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:12.662406" elapsed="0.205315"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:12.867721" level="INFO">Clicking element 'xpath://span[text()='Confirm']'.</msg>
-<arg>${confirm_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:12.867721" elapsed="0.200851"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:12.662406" elapsed="0.406166"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.357316" elapsed="0.000000"/>
 </kw>
 <kw name="verify the succesfull payment notification" owner="PaymentUser">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${successfull_payment_msg}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:13.086734" elapsed="2.770063"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:15.856797" level="INFO">Verifying element 'xpath://div[@class="notification-message"]//div' contains exact text 'The payment was successfully processed'.</msg>
-<arg>${successfull_payment_msg}</arg>
-<arg>The payment was successfully processed</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T01:05:15.856797" elapsed="0.235985"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:13.086734" elapsed="3.006048"/>
+<status status="NOT RUN" start="2024-05-28T15:43:02.357316" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-28T01:05:16.095803" elapsed="6.150136"/>
+<status status="PASS" start="2024-05-28T15:43:02.360215" elapsed="10.851630"/>
 </kw>
-<status status="PASS" start="2024-05-28T01:05:16.093782" elapsed="6.152157"/>
+<status status="PASS" start="2024-05-28T15:43:02.360215" elapsed="10.851630"/>
 </kw>
 <tag>smoke</tag>
-<status status="PASS" start="2024-05-28T01:04:28.936011" elapsed="53.309928"/>
+<status status="FAIL" start="2024-05-28T15:42:19.300480" elapsed="53.911365">Element 'xpath://div[text()="Payment to user"]' not visible after 5 seconds.</status>
 </test>
 <test id="s1-t2" name="To validate payment to user functionality with blank user name" line="33">
 <kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:22.245939" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-05-28T15:43:13.211845" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-28T01:05:22.245939" elapsed="5.464318"/>
+<status status="PASS" start="2024-05-28T15:43:13.211845" elapsed="5.669580"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:27.711258" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<msg time="2024-05-28T15:43:18.882428" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<msg time="2024-05-28T15:44:20.989982" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224D40920&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33/screenshot</msg>
+<msg time="2024-05-28T15:44:25.875162" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224D43290&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33/screenshot</msg>
+<msg time="2024-05-28T15:44:30.019930" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224CF8770&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33/screenshot</msg>
+<msg time="2024-05-28T15:44:34.046183" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=65492): Max retries exceeded with url: /session/ddadea4fad620d9cd4d3f3cf9af37e33/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224D1B9E0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<msg time="2024-05-28T15:44:34.046183" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-28T01:05:27.711258" elapsed="4.639187"/>
+<status status="FAIL" start="2024-05-28T15:43:18.881425" elapsed="75.838763">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</status>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-28T01:05:32.350445" elapsed="0.431484"/>
+<<<<<<< HEAD
+<status status="NOT RUN" start="2024-05-28T15:44:34.720188" elapsed="0.000000"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2024-05-28T15:44:34.720188" elapsed="0.000000"/>
+=======
+<status status="PASS" start="2024-05-28T01:05:32.350445" elapsed="0.431484"/>
+
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T23:17:05.875598" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Advertisement" source="C:\Cyclos_project\PilotProject_Cyclos_Team1-2\TestCases\test_advertisement.robot">
+<test id="s1-t1" name="verify that the Invalid keyword is entered in the keyword field" line="25">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:06.048441" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T23:17:06.048441" elapsed="1.620353"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:07.668794" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T23:17:07.668794" elapsed="2.798989"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-27T23:17:10.467783" elapsed="0.026758"/>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T15:25:33.767494" rpa="false" schemaversion="5">
+<suite id="s1" name="test alreadyExistsEmail" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_alreadyExistsEmail.robot">
+<test id="s1-t1" name="valid register Test case" line="13">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:35.865925" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T15:25:35.864493" elapsed="3.058586"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:38.923079" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T15:25:38.923079" elapsed="2.034291"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-27T15:25:40.958606" elapsed="0.037039"/>
 <status status="PASS" start="2024-05-28T01:05:32.781929" elapsed="0.000000"/>
+>>>>>>> 01b69c07ea1caf163703629db64d50ab3defbb9c
 </kw>
-<status status="PASS" start="2024-05-28T01:05:22.245939" elapsed="10.535990"/>
-</kw>
-<kw name="Fill the Login page" owner="LoginResource">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${login_button}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:32.781929" elapsed="4.041347"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:36.823276" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
-<arg>${login_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:36.823276" elapsed="0.419623"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${username_locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:37.242899" elapsed="0.230864"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:37.489390" level="INFO">Typing text 'demo' into text field 'css:input[placeholder="User"]'.</msg>
-<arg>${username_locator}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:37.473763" elapsed="1.007200"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${password_locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:38.480963" elapsed="0.140635"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:38.637229" level="INFO">Typing text '1234' into text field 'css:input[placeholder="Password"]'.</msg>
-<arg>${password_locator}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:38.637229" elapsed="0.493595"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${submit_btn}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:39.130824" elapsed="0.062504"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:39.193328" level="INFO">Clicking element 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
-<arg>${submit_btn}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:39.193328" elapsed="0.161647"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:32.781929" elapsed="6.573046"/>
-</kw>
-<kw name="Click the Banking Option" owner="HomeResource">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Banking_Xpath}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:39.370572" elapsed="2.535520"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:41.906092" level="INFO">Clicking element 'xpath://a[@id='menu_banking']'.</msg>
-<arg>${Banking_Xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:41.906092" elapsed="0.270460"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:39.370572" elapsed="2.805980"/>
-</kw>
-<kw name="Verify the Banking page is displayed" owner="HomeResource">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:42.307601" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
-<arg>${Banking_page_verify}</arg>
-<arg>${Banking_page_keyword}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T01:05:42.307601" elapsed="0.311508"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:42.307601" elapsed="0.314754"/>
-</kw>
-<kw name="Select the option payment to user" owner="PaymentUser">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${select_payment_to_user}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:42.622355" elapsed="2.666422"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:45.304698" level="INFO">Clicking element 'xpath://div[text()="Payment to user"]'.</msg>
-<arg>${select_payment_to_user}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:45.288777" elapsed="1.850334"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:42.622355" elapsed="4.516756"/>
-</kw>
-<kw name="verify the payment to user page open" owner="PaymentUser">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:47.718647" level="INFO">Verifying element 'xpath://div[@class="content-title d-flex"]//div' contains exact text 'Payment to user'.</msg>
-<arg>${payment_user_title}</arg>
-<arg>Payment to user</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T01:05:47.718647" elapsed="0.408042"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:47.718647" elapsed="0.408042"/>
-</kw>
-<kw name="Enter the valid amount in the amount field" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:48.130481" level="INFO">Typing text '10' into text field 'xpath://div[@class="input-group"]//input'.</msg>
-<arg>${amount}</arg>
-<arg>${amount_data}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:48.128718" elapsed="1.226502"/>
-</kw>
-<arg>${amount_data}</arg>
-<status status="PASS" start="2024-05-28T01:05:48.127687" elapsed="1.227533"/>
-</kw>
-<kw name="Click the next Button in payment page" owner="PaymentUser">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${next}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:05:49.355220" elapsed="0.062505"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:49.417725" level="INFO">Clicking element 'xpath://span[text()='Next']'.</msg>
-<arg>${next}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:05:49.417725" elapsed="0.234413"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:49.355220" elapsed="0.296918"/>
-</kw>
-<kw name="verify the error message for user to field is given blank" owner="PaymentUser">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:50.200582" level="INFO">Verifying element 'xpath:(//field-errors)[1]//div' contains exact text 'This field is required'.</msg>
-<arg>${to_user_error_msg}</arg>
-<arg>This field is required</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T01:05:50.200582" elapsed="0.100446"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:50.199579" elapsed="0.101449"/>
+<status status="FAIL" start="2024-05-28T15:43:13.211845" elapsed="81.508343">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</status>
 </kw>
 <kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:44:38.763334" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224EA41A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33</msg>
+<msg time="2024-05-28T15:44:42.820300" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224EA4380&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33</msg>
+<msg time="2024-05-28T15:44:46.845902" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224EA45C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33</msg>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-28T01:05:50.582216" elapsed="5.172830"/>
+<status status="PASS" start="2024-05-28T15:44:34.720188" elapsed="20.225031"/>
 </kw>
-<status status="PASS" start="2024-05-28T01:05:50.582216" elapsed="5.172830"/>
+<status status="PASS" start="2024-05-28T15:44:34.720188" elapsed="20.225031"/>
 </kw>
 <tag>regression</tag>
-<status status="PASS" start="2024-05-28T01:05:22.245939" elapsed="33.509107"/>
+<status status="FAIL" start="2024-05-28T15:43:13.211845" elapsed="101.733374">Setup failed:
+ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</status>
 </test>
 <test id="s1-t3" name="To validate payment to user functionality with blank amount field" line="44">
 <kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:05:55.755046" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-05-28T15:44:54.945219" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-28T01:05:55.755046" elapsed="5.416370"/>
+<status status="PASS" start="2024-05-28T15:44:54.945219" elapsed="8.424283"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:01.171416" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-28T01:06:01.171416" elapsed="5.012795"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-28T01:06:06.184211" elapsed="0.297895"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>5</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-28T01:06:06.482106" elapsed="0.020717"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:05:55.755046" elapsed="10.747777"/>
-</kw>
-<kw name="Fill the Login page" owner="LoginResource">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${login_button}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:06:06.502823" elapsed="3.319034"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:09.821857" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
-<arg>${login_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:09.821857" elapsed="0.516996"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${username_locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:06:10.338853" elapsed="0.385722"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:10.724575" level="INFO">Typing text 'demo' into text field 'css:input[placeholder="User"]'.</msg>
-<arg>${username_locator}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:10.724575" elapsed="0.906313"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${password_locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:06:11.630888" elapsed="0.203170"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:11.834058" level="INFO">Typing text '1234' into text field 'css:input[placeholder="Password"]'.</msg>
-<arg>${password_locator}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:11.834058" elapsed="0.421872"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${submit_btn}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:06:12.255930" elapsed="0.204653"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:12.460583" level="INFO">Clicking element 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
-<arg>${submit_btn}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:12.460583" elapsed="0.204933"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:06.502823" elapsed="6.162693"/>
-</kw>
-<kw name="Click the Banking Option" owner="HomeResource">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Banking_Xpath}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:06:12.665516" elapsed="2.299708"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:14.966222" level="INFO">Clicking element 'xpath://a[@id='menu_banking']'.</msg>
-<arg>${Banking_Xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:14.966222" elapsed="0.349246"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:12.665516" elapsed="2.649952"/>
-</kw>
-<kw name="Verify the Banking page is displayed" owner="HomeResource">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:15.328455" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
-<arg>${Banking_page_verify}</arg>
-<arg>${Banking_page_keyword}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T01:06:15.328455" elapsed="0.322116"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:15.324582" elapsed="0.325989"/>
-</kw>
-<kw name="Select the option payment to user" owner="PaymentUser">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${select_payment_to_user}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:06:15.653439" elapsed="3.971083"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:19.638098" level="INFO">Clicking element 'xpath://div[text()="Payment to user"]'.</msg>
-<arg>${select_payment_to_user}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:19.638098" elapsed="0.631449"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:15.651571" elapsed="4.617976"/>
-</kw>
-<kw name="verify the payment to user page open" owner="PaymentUser">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:20.877344" level="INFO">Verifying element 'xpath://div[@class="content-title d-flex"]//div' contains exact text 'Payment to user'.</msg>
-<arg>${payment_user_title}</arg>
-<arg>Payment to user</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T01:06:20.877344" elapsed="0.109384"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:20.877344" elapsed="0.109384"/>
-</kw>
-<kw name="Enter the username in the to user field" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:20.986728" level="INFO">Typing text 'demo' into text field 'xpath://input[@placeholder="Type to search"]'.</msg>
-<arg>${to_User}</arg>
-<arg>${user_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:20.986728" elapsed="0.751235"/>
-</kw>
-<arg>${user_name}</arg>
-<status status="PASS" start="2024-05-28T01:06:20.986728" elapsed="0.751235"/>
-</kw>
-<kw name="Select the user" owner="PaymentUser">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:21.756956" level="INFO">Clicking element 'xpath://div[@role='listbox']/a[text()=' Demo one ']'.</msg>
-<arg>${user_select}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:21.756956" elapsed="2.044796"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:21.753952" elapsed="2.047800"/>
-</kw>
-<kw name="Click the scheduling dropdown button" owner="PaymentUser">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:23.803752" level="INFO">Clicking element 'xpath://button[@class='form-control text-left custom-select w-100']'.</msg>
-<arg>${Scheduling}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:23.802751" elapsed="1.989144"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:23.802751" elapsed="1.989144"/>
-</kw>
-<kw name="Click the monthly installment option" owner="PaymentUser">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:25.823685" level="INFO">Clicking element 'xpath://div[@role='listbox']//a[text()=' Monthly installments ']'.</msg>
-<arg>${monthly_inst_option}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:25.822685" elapsed="1.027269"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:25.806500" elapsed="1.043454"/>
-</kw>
-<kw name="Fill the no of installments" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:26.921895" level="INFO">Typing text '5' into text field 'xpath://div[@class='d-flex label-value-value']//input[@type='number']'.</msg>
-<arg>${no_of_installments}</arg>
-<arg>${no_of_installments_data}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:26.920895" elapsed="0.429762"/>
-</kw>
-<arg>${inst_no}</arg>
-<status status="PASS" start="2024-05-28T01:06:26.919893" elapsed="0.430764"/>
-</kw>
-<kw name="Click the first installment" owner="PaymentUser">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:27.366394" level="INFO">Clicking element 'xpath://label[@class='custom-control-label' and text()=' Future date ']'.</msg>
-<arg>${first_instal}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:27.365394" elapsed="0.214385"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:27.364394" elapsed="0.215385"/>
-</kw>
-<kw name="Fill the future date" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:27.579779" level="INFO">Typing text '30-05-2024' into text field 'xpath://div[@class='d-flex label-value-value']//input[@type='date']'.</msg>
-<arg>${future_date}</arg>
-<arg>${fut_date}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:27.579779" elapsed="0.715258"/>
-</kw>
-<arg>${fut_date}</arg>
-<status status="PASS" start="2024-05-28T01:06:27.579779" elapsed="0.715258"/>
-</kw>
-<kw name="Fill the description" owner="PaymentUser">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:28.357181" level="INFO">Typing text 'Monthly Installments' into text field 'xpath://div[@class='d-flex label-value-value']//textarea'.</msg>
-<arg>${descrip_xpath}</arg>
-<arg>${description}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:28.355181" elapsed="0.866613"/>
-</kw>
-<arg>${description}</arg>
-<status status="PASS" start="2024-05-28T01:06:28.354179" elapsed="0.867615"/>
-</kw>
-<kw name="Click the next Button in payment page" owner="PaymentUser">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${next}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-28T01:06:29.228357" elapsed="0.075173"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:29.307629" level="INFO">Clicking element 'xpath://span[text()='Next']'.</msg>
-<arg>${next}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T01:06:29.304527" elapsed="0.549564"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:29.226358" elapsed="0.627733"/>
-</kw>
-<kw name="verify the error message for amount field is given blank" owner="PaymentUser">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:29.964331" level="INFO">Verifying element 'xpath:(//field-errors)[2]//div' contains exact text 'This field is required'.</msg>
-<arg>${amount_error_msg}</arg>
-<arg>This field is required</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T01:06:29.964331" elapsed="0.075158"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:29.964331" elapsed="0.075158"/>
-</kw>
-<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-28T01:06:30.055115" elapsed="4.006932"/>
-</kw>
-<status status="PASS" start="2024-05-28T01:06:30.055115" elapsed="4.006932"/>
-</kw>
-<tag>regression</tag>
-<status status="PASS" start="2024-05-28T01:05:55.755046" elapsed="38.307001"/>
-</test>
-<test id="s1-t4" name="To validate payment to user functionality with blank fields" line="62">
-<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:34.062047" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>Chrome</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-28T01:06:34.062047" elapsed="6.061423"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:06:40.124472" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
-<msg time="2024-05-28T01:12:09.676563" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot</msg>
-<msg time="2024-05-28T01:12:13.943369" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC6D9A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot</msg>
-<msg time="2024-05-28T01:12:17.998046" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC6CE90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot</msg>
-<msg time="2024-05-28T01:12:22.104561" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=56205): Max retries exceeded with url: /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC6CD70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg time="2024-05-28T01:12:22.120073" level="FAIL">TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000
+<msg time="2024-05-28T15:45:03.369502" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<msg time="2024-05-28T15:45:21.522653" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=125.0.6422.78)
 Stacktrace:
-	GetHandleVerifier [0x00007FF77DC01F22+60322]
-	(No symbol) [0x00007FF77DB7CE99]
-	(No symbol) [0x00007FF77DA37EBA]
-	(No symbol) [0x00007FF77DA2070D]
-	(No symbol) [0x00007FF77DA20410]
-	(No symbol) [0x00007FF77DA1E39D]
-	(No symbol) [0x00007FF77DA1EBAF]
-	(No symbol) [0x00007FF77DA2D97E]
-	(No symbol) [0x00007FF77DA45C6F]
-	(No symbol) [0x00007FF77DA4B67A]
-	(No symbol) [0x00007FF77DA1F33A]
-	(No symbol) [0x00007FF77DA459B1]
-	(No symbol) [0x00007FF77DACBB5B]
-	(No symbol) [0x00007FF77DAABFC3]
-	(No symbol) [0x00007FF77DA79617]
-	(No symbol) [0x00007FF77DA7A211]
-	GetHandleVerifier [0x00007FF77DF1946D+3301613]
-	GetHandleVerifier [0x00007FF77DF63693+3605267]
-	GetHandleVerifier [0x00007FF77DF59410+3563664]
-	GetHandleVerifier [0x00007FF77DCB42F6+790390]
-	(No symbol) [0x00007FF77DB874DF]
-	(No symbol) [0x00007FF77DB833D4]
-	(No symbol) [0x00007FF77DB83562]
-	(No symbol) [0x00007FF77DB72F6F]
+	GetHandleVerifier [0x00007FF68AA31F22+60322]
+	(No symbol) [0x00007FF68A9ACE99]
+	(No symbol) [0x00007FF68A867EBA]
+	(No symbol) [0x00007FF68A83D5A5]
+	(No symbol) [0x00007FF68A8E36B7]
+	(No symbol) [0x00007FF68A8FB331]
+	(No symbol) [0x00007FF68A8DBFC3]
+	(No symbol) [0x00007FF68A8A9617]
+	(No symbol) [0x00007FF68A8AA211]
+	GetHandleVerifier [0x00007FF68AD4946D+3301613]
+	GetHandleVerifier [0x00007FF68AD93693+3605267]
+	GetHandleVerifier [0x00007FF68AD89410+3563664]
+	GetHandleVerifier [0x00007FF68AAE42F6+790390]
+	(No symbol) [0x00007FF68A9B74DF]
+	(No symbol) [0x00007FF68A9B33D4]
+	(No symbol) [0x00007FF68A9B3562]
+	(No symbol) [0x00007FF68A9A2F6F]
+	BaseThreadInitThunk [0x00007FFB56E4257D+29]
+	RtlUserThreadStart [0x00007FFB57BCAA48+40]
+</msg>
+<msg time="2024-05-28T15:45:21.691847" level="FAIL">WebDriverException: Message: disconnected: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68AA31F22+60322]
+	(No symbol) [0x00007FF68A9ACE99]
+	(No symbol) [0x00007FF68A867EBA]
+	(No symbol) [0x00007FF68A8515EF]
+	(No symbol) [0x00007FF68A850D17]
+	(No symbol) [0x00007FF68A8504D1]
+	(No symbol) [0x00007FF68A850410]
+	(No symbol) [0x00007FF68A84F3CB]
+	(No symbol) [0x00007FF68A87584F]
+	(No symbol) [0x00007FF68A8FBB5B]
+	(No symbol) [0x00007FF68A8DBFC3]
+	(No symbol) [0x00007FF68A8A9617]
+	(No symbol) [0x00007FF68A8AA211]
+	GetHandleVerifier [0x00007FF68AD4946D+3301613]
+	GetHandleVerifier [0x00007FF68AD93693+3605267]
+	GetHandleVerifier [0x00007FF68AD89410+3563664]
+	GetHandleVerifier [0x00007FF68AAE42F6+790390]
+	(No symbol) [0x00007FF68A9B74DF]
+	(No symbol) [0x00007FF68A9B33D4]
+	(No symbol) [0x00007FF68A9B3562]
+	(No symbol) [0x00007FF68A9A2F6F]
 	BaseThreadInitThunk [0x00007FFB56E4257D+29]
 	RtlUserThreadStart [0x00007FFB57BCAA48+40]
 </msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="FAIL" start="2024-05-28T01:06:40.124472" elapsed="342.342113">TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000
+<status status="FAIL" start="2024-05-28T15:45:03.369502" elapsed="18.349603">WebDriverException: Message: disconnected: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
   (Session info: chrome=125.0.6422.78)
 Stacktrace:
-	GetHandleVerifier [0x00007FF77DC01F22+60322]
-	(No symbol) [0x00007FF77DB7CE99]
-	(No symbol) [0x00007FF77DA37EBA]
-	(No symbol) [0x00007FF77DA2070D]
-	(No symbol) [0x00007FF77DA20410]
-	(No symbol) [0x00007FF77DA1E39D]
-	(No symbol) [0x00007FF77DA1EBAF]
-	(No symbol) [0x00007FF77DA2D97E]
-	(No symbol) [0x00007FF77DA45C6F]
-	(No symbol) [0x00007FF77DA4B67A]
-	(No symbol) [0x00007FF77DA1F33A]
-	(No symbol) [0x00007FF77DA459B1]
-	(No symbol) [0x00007FF77DACBB5B]
-	(No symbol) [0x00007FF77DAABFC3]
-	(No symbol) [0x00007FF77DA79617]
-	(No symbol) [0x00007FF77DA7A211]
-	GetHandleVerifier [0x00007FF77DF1946D+3301613]
-	GetHandleVerifier [0x00007FF77DF63693+3605267]
-	GetHandleVerifier [0x00007FF77DF59410+3563664]
-	GetHandleVerifier [0x00007FF77DCB42F6+790390]
-	(No symbol) [0x00007FF77DB874DF]
-	(No symbol) [0x00007FF77DB833D4]
-	(No symbol) [0x00007FF77DB83562]
-	(No symbol) [0x00007FF77DB72F6F]
+	GetHandleVerifier [0x00007FF68AA31F22+60322]
+	(No symbol) [0x00007FF68A9ACE99]
+	(No symbol) [0x00007FF68A867EBA]
+	(No symbol) [0x00007FF68A8515EF]
+	(No symbol) [0x00007FF68A850D17]
+	(No symbol) [0x00007FF68A8504D1]
+	(No symbol) [0x00007FF68A850410]
+	(No symbol) [0x00007FF68A84F3CB]
+	(No symbol) [0x00007FF68A87584F]
+	(No symbol) [0x00007FF68A8FBB5B]
+	(No symbol) [0x00007FF68A8DBFC3]
+	(No symbol) [0x00007FF68A8A9617]
+	(No symbol) [0x00007FF68A8AA211]
+	GetHandleVerifier [0x00007FF68AD4946D+3301613]
+	GetHandleVerifier [0x00007FF68AD93693+3605267]
+	GetHandleVerifier [0x00007FF68AD89410+3563664]
+	GetHandleVerifier [0x00007FF68AAE42F6+790390]
+	(No symbol) [0x00007FF68A9B74DF]
+	(No symbol) [0x00007FF68A9B33D4]
+	(No symbol) [0x00007FF68A9B3562]
+	(No symbol) [0x00007FF68A9A2F6F]
 	BaseThreadInitThunk [0x00007FFB56E4257D+29]
 	RtlUserThreadStart [0x00007FFB57BCAA48+40]
 </status>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" start="2024-05-28T01:12:22.475973" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-05-28T15:45:21.719105" elapsed="0.000000"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" start="2024-05-28T01:12:22.475973" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-05-28T15:45:21.734331" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2024-05-28T01:06:34.062047" elapsed="348.413926">TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000
+<status status="FAIL" start="2024-05-28T15:44:54.945219" elapsed="26.789112">WebDriverException: Message: disconnected: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
   (Session info: chrome=125.0.6422.78)
 Stacktrace:
-	GetHandleVerifier [0x00007FF77DC01F22+60322]
-	(No symbol) [0x00007FF77DB7CE99]
-	(No symbol) [0x00007FF77DA37EBA]
-	(No symbol) [0x00007FF77DA2070D]
-	(No symbol) [0x00007FF77DA20410]
-	(No symbol) [0x00007FF77DA1E39D]
-	(No symbol) [0x00007FF77DA1EBAF]
-	(No symbol) [0x00007FF77DA2D97E]
-	(No symbol) [0x00007FF77DA45C6F]
-	(No symbol) [0x00007FF77DA4B67A]
-	(No symbol) [0x00007FF77DA1F33A]
-	(No symbol) [0x00007FF77DA459B1]
-	(No symbol) [0x00007FF77DACBB5B]
-	(No symbol) [0x00007FF77DAABFC3]
-	(No symbol) [0x00007FF77DA79617]
-	(No symbol) [0x00007FF77DA7A211]
-	GetHandleVerifier [0x00007FF77DF1946D+3301613]
-	GetHandleVerifier [0x00007FF77DF63693+3605267]
-	GetHandleVerifier [0x00007FF77DF59410+3563664]
-	GetHandleVerifier [0x00007FF77DCB42F6+790390]
-	(No symbol) [0x00007FF77DB874DF]
-	(No symbol) [0x00007FF77DB833D4]
-	(No symbol) [0x00007FF77DB83562]
-	(No symbol) [0x00007FF77DB72F6F]
+	GetHandleVerifier [0x00007FF68AA31F22+60322]
+	(No symbol) [0x00007FF68A9ACE99]
+	(No symbol) [0x00007FF68A867EBA]
+	(No symbol) [0x00007FF68A8515EF]
+	(No symbol) [0x00007FF68A850D17]
+	(No symbol) [0x00007FF68A8504D1]
+	(No symbol) [0x00007FF68A850410]
+	(No symbol) [0x00007FF68A84F3CB]
+	(No symbol) [0x00007FF68A87584F]
+	(No symbol) [0x00007FF68A8FBB5B]
+	(No symbol) [0x00007FF68A8DBFC3]
+	(No symbol) [0x00007FF68A8A9617]
+	(No symbol) [0x00007FF68A8AA211]
+	GetHandleVerifier [0x00007FF68AD4946D+3301613]
+	GetHandleVerifier [0x00007FF68AD93693+3605267]
+	GetHandleVerifier [0x00007FF68AD89410+3563664]
+	GetHandleVerifier [0x00007FF68AAE42F6+790390]
+	(No symbol) [0x00007FF68A9B74DF]
+	(No symbol) [0x00007FF68A9B33D4]
+	(No symbol) [0x00007FF68A9B3562]
+	(No symbol) [0x00007FF68A9A2F6F]
 	BaseThreadInitThunk [0x00007FFB56E4257D+29]
 	RtlUserThreadStart [0x00007FFB57BCAA48+40]
 </status>
 </kw>
 <kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
-<msg time="2024-05-28T01:12:26.559773" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC545C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37</msg>
-<msg time="2024-05-28T01:12:30.650200" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC561E0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37</msg>
-<msg time="2024-05-28T01:12:34.755430" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC56CF0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37</msg>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-28T01:12:22.475973" elapsed="20.849555"/>
+<status status="PASS" start="2024-05-28T15:45:21.734331" elapsed="3.968870"/>
 </kw>
-<status status="PASS" start="2024-05-28T01:12:22.475973" elapsed="20.849555"/>
+<status status="PASS" start="2024-05-28T15:45:21.734331" elapsed="3.968870"/>
 </kw>
-<tag>smoke</tag>
-<status status="FAIL" start="2024-05-28T01:06:34.062047" elapsed="370.223511">Setup failed:
-TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000
+<tag>regression</tag>
+<status status="FAIL" start="2024-05-28T15:44:54.945219" elapsed="30.757982">Setup failed:
+WebDriverException: Message: disconnected: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
   (Session info: chrome=125.0.6422.78)
 Stacktrace:
-	GetHandleVerifier [0x00007FF77DC01F22+60322]
-	(No symbol) [0x00007FF77DB7CE99]
-	(No symbol) [0x00007FF77DA37EBA]
-	(No symbol) [0x00007FF77DA2070D]
-	(No symbol) [0x00007FF77DA20410]
-	(No symbol) [0x00007FF77DA1E39D]
-	(No symbol) [0x00007FF77DA1EBAF]
-	(No symbol) [0x00007FF77DA2D97E]
-	(No symbol) [0x00007FF77DA45C6F]
-	(No symbol) [0x00007FF77DA4B67A]
-	(No symbol) [0x00007FF77DA1F33A]
-	(No symbol) [0x00007FF77DA459B1]
-	(No symbol) [0x00007FF77DACBB5B]
-	(No symbol) [0x00007FF77DAABFC3]
-	(No symbol) [0x00007FF77DA79617]
-	(No symbol) [0x00007FF77DA7A211]
-	GetHandleVerifier [0x00007FF77DF1946D+3301613]
-	GetHandleVerifier [0x00007FF77DF63693+3605267]
-	GetHandleVerifier [0x00007FF77DF59410+3563664]
-	GetHandleVerifier [0x00007FF77DCB42F6+790390]
-	(No symbol) [0x00007FF77DB874DF]
-	(No symbol) [0x00007FF77DB833D4]
-	(No symbol) [0x00007FF77DB83562]
-	(No symbol) [0x00007FF77DB72F6F]
+	GetHandleVerifier [0x00007FF68AA31F22+60322]
+	(No symbol) [0x00007FF68A9ACE99]
+	(No symbol) [0x00007FF68A867EBA]
+	(No symbol) [0x00007FF68A8515EF]
+	(No symbol) [0x00007FF68A850D17]
+	(No symbol) [0x00007FF68A8504D1]
+	(No symbol) [0x00007FF68A850410]
+	(No symbol) [0x00007FF68A84F3CB]
+	(No symbol) [0x00007FF68A87584F]
+	(No symbol) [0x00007FF68A8FBB5B]
+	(No symbol) [0x00007FF68A8DBFC3]
+	(No symbol) [0x00007FF68A8A9617]
+	(No symbol) [0x00007FF68A8AA211]
+	GetHandleVerifier [0x00007FF68AD4946D+3301613]
+	GetHandleVerifier [0x00007FF68AD93693+3605267]
+	GetHandleVerifier [0x00007FF68AD89410+3563664]
+	GetHandleVerifier [0x00007FF68AAE42F6+790390]
+	(No symbol) [0x00007FF68A9B74DF]
+	(No symbol) [0x00007FF68A9B33D4]
+	(No symbol) [0x00007FF68A9B3562]
+	(No symbol) [0x00007FF68A9A2F6F]
 	BaseThreadInitThunk [0x00007FFB56E4257D+29]
 	RtlUserThreadStart [0x00007FFB57BCAA48+40]
 </status>
 </test>
+<test id="s1-t4" name="To validate payment to user functionality with blank fields" line="62">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:25.730389" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T15:45:25.730389" elapsed="6.427132"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:32.174582" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T15:45:32.173567" elapsed="5.166151"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T15:45:37.339718" elapsed="0.733039"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T15:45:38.072757" elapsed="0.099955"/>
+</kw>
+<status status="PASS" start="2024-05-28T15:45:25.729382" elapsed="12.443330"/>
+</kw>
+<kw name="Fill the Login page" owner="LoginResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-28T15:45:38.288436" elapsed="2.644385"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:40.932821" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T15:45:40.932821" elapsed="0.503675"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-28T15:45:41.437523" elapsed="0.106341"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:41.543864" level="INFO">Typing text 'demo' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T15:45:41.543864" elapsed="0.665805"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${password_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-28T15:45:42.209669" elapsed="0.343804"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:42.553473" level="INFO">Typing text '1234' into text field 'css:input[placeholder="Password"]'.</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T15:45:42.553473" elapsed="0.921907"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submit_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-28T15:45:43.475380" elapsed="0.125014"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:43.600394" level="INFO">Clicking element 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T15:45:43.600394" elapsed="0.203134"/>
+</kw>
+<arg>demo</arg>
+<arg>1234</arg>
+<status status="PASS" start="2024-05-28T15:45:38.269562" elapsed="5.533966"/>
+</kw>
+<kw name="Click the Banking Option" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Banking_Xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-28T15:45:43.912913" elapsed="1.767778"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:45.681695" level="INFO">Clicking element 'xpath://a[@id='menu_banking']'.</msg>
+<arg>${Banking_Xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T15:45:45.681695" elapsed="1.413261"/>
+</kw>
+<status status="PASS" start="2024-05-28T15:45:43.912913" elapsed="3.182043"/>
+</kw>
+<kw name="Verify the Banking page is displayed" owner="HomeResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:47.484255" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
+<arg>${Banking_page_verify}</arg>
+<arg>${Banking_page_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T15:45:47.483252" elapsed="0.371687"/>
+</kw>
+<status status="PASS" start="2024-05-28T15:45:47.482254" elapsed="0.375688"/>
+</kw>
+<kw name="Select the option payment to user" owner="PaymentUser">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${select_payment_to_user}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-28T15:45:47.905131" elapsed="0.569877"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:48.475008" level="INFO">Clicking element 'xpath://div[text()="Payment to user"]'.</msg>
+<arg>${select_payment_to_user}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T15:45:48.475008" elapsed="0.585927"/>
+</kw>
+<status status="PASS" start="2024-05-28T15:45:47.905131" elapsed="1.155804"/>
+</kw>
+<kw name="verify the payment to user page open" owner="PaymentUser">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:49.095837" level="INFO">Verifying element 'xpath://div[@class="content-title d-flex"]//div' contains exact text 'Payment to user'.</msg>
+<arg>${payment_user_title}</arg>
+<arg>Payment to user</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T15:45:49.095837" elapsed="1.068053"/>
+</kw>
+<status status="PASS" start="2024-05-28T15:45:49.095837" elapsed="1.068053"/>
+</kw>
+<kw name="Click the next Button in payment page" owner="PaymentUser">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-28T15:45:50.330757" elapsed="0.122214"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:50.452971" level="INFO">Clicking element 'xpath://span[text()='Next']'.</msg>
+<arg>${next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T15:45:50.452971" elapsed="0.230057"/>
+</kw>
+<status status="PASS" start="2024-05-28T15:45:50.330757" elapsed="0.352271"/>
+</kw>
+<kw name="verify the error message for user to field is given blank" owner="PaymentUser">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:50.683028" level="INFO">Verifying element 'xpath:(//field-errors)[1]//div' contains exact text 'This field is required'.</msg>
+<arg>${to_user_error_msg}</arg>
+<arg>This field is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T15:45:50.683028" elapsed="0.119357"/>
+</kw>
+<status status="PASS" start="2024-05-28T15:45:50.683028" elapsed="0.120358"/>
+</kw>
+<kw name="verify the error message for amount field is given blank" owner="PaymentUser">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T15:45:50.816742" level="INFO">Verifying element 'xpath:(//field-errors)[2]//div' contains exact text 'This field is required'.</msg>
+<arg>${amount_error_msg}</arg>
+<arg>This field is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T15:45:50.815721" elapsed="0.134745"/>
+</kw>
+<status status="PASS" start="2024-05-28T15:45:50.815721" elapsed="0.134745"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T15:45:50.958556" elapsed="5.481227"/>
+</kw>
+<status status="PASS" start="2024-05-28T15:45:50.957574" elapsed="5.482209"/>
+</kw>
+<tag>retest</tag>
+<status status="PASS" start="2024-05-28T15:45:25.726154" elapsed="30.713629"/>
+</test>
 <doc>To validate Banking - payment to user Functionality</doc>
-<status status="FAIL" start="2024-05-28T01:04:28.020222" elapsed="496.312212"/>
+<status status="FAIL" start="2024-05-28T15:42:17.975901" elapsed="218.463882"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">regression</stat>
-<stat pass="1" fail="1" skip="0">smoke</stat>
+<stat pass="0" fail="2" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">retest</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
 </tag>
 <suite>
+<<<<<<< HEAD
+<stat pass="1" fail="3" skip="0" id="s1" name="Test User Payment">Test User Payment</stat>
+=======
 <stat pass="3" fail="1" skip="0" id="s1" name="Test Payment To User">Test Payment To User</stat>
+=======
+<status status="PASS" start="2024-05-27T23:17:10.494541" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:06.048441" elapsed="4.446100"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:10.497310" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:10.497310" elapsed="1.980311"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:10.494541" elapsed="1.983080"/>
+</kw>
+<kw name="Fill the Login page" owner="LoginResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.479758" elapsed="0.022552"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:12.502310" level="INFO">Typing text 'Sanjay_stark' into text field 'xpath://input[@placeholder="User"]'.</msg>
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.502310" elapsed="0.135397"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:12.637707" level="INFO">Typing text 'Sanjay' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.637707" elapsed="0.179307"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.817572" elapsed="0.026255"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:12.843827" level="INFO">Clicking element 'xpath://span[text()='Submit']'.</msg>
+<arg>${submit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.843827" elapsed="0.074058"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:12.478658" elapsed="0.439227"/>
+</kw>
+<kw name="Click on the MarketPlace button" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${marketplace}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.918782" elapsed="0.663002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:13.586839" level="INFO">Clicking element 'css:a[id="menu_marketplace"]'.</msg>
+<arg>${marketplace}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:13.586839" elapsed="0.055315"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:12.918277" elapsed="0.723877"/>
+</kw>
+<kw name="verify that the markerplace is open" owner="AdvertisementResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:13.642820" level="INFO">Verifying element 'xpath://div[@class="side-menu-icon"]//following-sibling::div' contains exact text 'Marketplace'.</msg>
+<arg>${market_title}</arg>
+<arg>Marketplace</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T23:17:13.642820" elapsed="1.351507"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:13.642820" elapsed="1.352503"/>
+</kw>
+<kw name="Click on the advertisement page button" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Advertisement}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:14.995323" elapsed="0.018816"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:15.014139" level="INFO">Clicking element 'xpath://div[text()='Advertisements']'.</msg>
+<arg>${Advertisement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:15.014139" elapsed="0.054696"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:14.995323" elapsed="0.073512"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-27T23:17:18.069149" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-27T23:17:15.068835" elapsed="3.000314"/>
+</kw>
+<kw name="Enter the invalid Keyword in the keyword box" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${keyword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:18.071240" elapsed="0.019570"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:18.090810" level="INFO">Typing text '@#$!' into text field 'xpath=(//div[@class='d-flex label-value-value']//input)[1]'.</msg>
+<arg>${keyword}</arg>
+<arg>@#$!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:18.090810" elapsed="0.105648"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:18.070104" elapsed="0.126354"/>
+</kw>
+<kw name="verify the invalid keyword error message is displayed" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${invalid_keyword_message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:18.196458" elapsed="0.971628"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:19.168086" level="INFO">Verifying element 'xpath://div[text()='Invalid keywords']' contains exact text 'Invalid keywords'.</msg>
+<arg>${invalid_keyword_message}</arg>
+<arg>Invalid keywords</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T23:17:19.168086" elapsed="0.014458"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:18.196458" elapsed="0.986086"/>
+=======
+<status status="PASS" start="2024-05-27T15:25:40.995645" elapsed="0.010963"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:25:35.863187" elapsed="5.144422"/>
+</kw>
+<kw name="Valid register with all the fields">
+<kw name="Go to Register Page" owner="HomeResource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-27T15:25:46.013784" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-27T15:25:41.012588" elapsed="5.001196"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:46.014785" level="INFO">Clicking element 'xpath://div[text()=" Register "]'.</msg>
+<arg>${register_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T15:25:46.013784" elapsed="0.105308"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:25:41.012588" elapsed="5.106504"/>
+</kw>
+<kw name="Verify Register Page opens" owner="RegisterResource">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:47.753871" level="INFO">Element 'xpath://div[text()=" User registration "]' contains text 'User registration'.</msg>
+<arg>${verify_register}</arg>
+<arg>User registration</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T15:25:46.120089" elapsed="1.633782"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:25:46.120089" elapsed="1.633782"/>
+</kw>
+<kw name="Fill the Required feilds" owner="RegisterResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:47.755870" level="INFO">Typing text '  abc' into text field 'xpath://input-field[@formcontrolname="name"]/label-value/div/div/input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T15:25:47.755870" elapsed="0.132519"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:47.889386" level="INFO">Typing text 'abc12345' into text field 'xpath://input-field[@formcontrolname="username"]/label-value/div/div/input'.</msg>
+<arg>${loginName_field}</arg>
+<arg>${login_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T15:25:47.888389" elapsed="0.163155"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:48.052542" level="INFO">Typing text 'sandhiya110902@gmail.com' into text field 'xpath://input-field[@formcontrolname="email"]/input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T15:25:48.052542" elapsed="0.170798"/>
+</kw>
+<arg>${name}</arg>
+<arg>${login}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2024-05-27T15:25:47.754872" elapsed="0.468468"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:48.225334" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-27T15:25:48.223340" elapsed="0.008555"/>
+</kw>
+<kw name="clicking next button for mandatory field" owner="RegisterResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${man_next_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T15:25:48.232911" elapsed="0.033127"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:48.267036" level="INFO">Clicking button 'xpath:(//action-button[@class="d-inline-block button"]/button)[2]'.</msg>
+<arg>${man_next_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T15:25:48.267036" elapsed="0.081987"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:25:48.232911" elapsed="0.116112"/>
+</kw>
+<kw name="verification for email already exists" owner="RegisterResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T15:25:48.350020" level="INFO">Verifying element 'css:div[class="invalid-feedback"]' contains exact text 'E-Mail must be unique.'.</msg>
+<arg>${field_required}</arg>
+<arg>E-Mail must be unique.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T15:25:48.350020" elapsed="0.944120"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:25:48.349023" elapsed="0.946108"/>
+</kw>
+<arg>name=  abc</arg>
+<arg>login=abc12345</arg>
+<arg>email=sandhiya110902@gmail.com</arg>
+<status status="PASS" start="2024-05-27T15:25:41.011592" elapsed="8.283539"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">invalid</stat>
+<stat pass="1" fail="0" skip="0">Retest</stat>
+</tag>
+<suite>
+>>>>>>> 01b69c07ea1caf163703629db64d50ab3defbb9c
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-28T01:12:09.676563" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot</msg>
-<msg time="2024-05-28T01:12:13.943369" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC6D9A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot</msg>
-<msg time="2024-05-28T01:12:17.998046" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC6CE90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot</msg>
-<msg time="2024-05-28T01:12:22.104561" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=56205): Max retries exceeded with url: /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC6CD70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg time="2024-05-28T01:12:26.559773" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC545C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37</msg>
-<msg time="2024-05-28T01:12:30.650200" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC561E0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37</msg>
-<msg time="2024-05-28T01:12:34.755430" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC56CF0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37</msg>
+<msg time="2024-05-28T15:44:20.989982" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224D40920&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33/screenshot</msg>
+<msg time="2024-05-28T15:44:25.875162" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224D43290&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33/screenshot</msg>
+<msg time="2024-05-28T15:44:30.019930" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224CF8770&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33/screenshot</msg>
+<msg time="2024-05-28T15:44:34.046183" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=65492): Max retries exceeded with url: /session/ddadea4fad620d9cd4d3f3cf9af37e33/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224D1B9E0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<msg time="2024-05-28T15:44:38.763334" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224EA41A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33</msg>
+<msg time="2024-05-28T15:44:42.820300" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224EA4380&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33</msg>
+<msg time="2024-05-28T15:44:46.845902" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022224EA45C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ddadea4fad620d9cd4d3f3cf9af37e33</msg>
+<msg time="2024-05-28T15:45:21.522653" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68AA31F22+60322]
+	(No symbol) [0x00007FF68A9ACE99]
+	(No symbol) [0x00007FF68A867EBA]
+	(No symbol) [0x00007FF68A83D5A5]
+	(No symbol) [0x00007FF68A8E36B7]
+	(No symbol) [0x00007FF68A8FB331]
+	(No symbol) [0x00007FF68A8DBFC3]
+	(No symbol) [0x00007FF68A8A9617]
+	(No symbol) [0x00007FF68A8AA211]
+	GetHandleVerifier [0x00007FF68AD4946D+3301613]
+	GetHandleVerifier [0x00007FF68AD93693+3605267]
+	GetHandleVerifier [0x00007FF68AD89410+3563664]
+	GetHandleVerifier [0x00007FF68AAE42F6+790390]
+	(No symbol) [0x00007FF68A9B74DF]
+	(No symbol) [0x00007FF68A9B33D4]
+	(No symbol) [0x00007FF68A9B3562]
+	(No symbol) [0x00007FF68A9A2F6F]
+	BaseThreadInitThunk [0x00007FFB56E4257D+29]
+	RtlUserThreadStart [0x00007FFB57BCAA48+40]
+</msg>
 </errors>
 </robot>

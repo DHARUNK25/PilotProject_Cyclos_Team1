@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 Resource    HomeResource.robot
 
 *** Variables ***
-${receive_payment}    xpath:(//nav[@class='navbar d-flex flex-column align-items-stretch']//a/div)[4]
+${receive_payment}    xpath:(//nav[@class='navbar d-flex flex-column align-items-stretch']//a/div)[5]
 ${rec_pay_verify}    xpath://div[text()=' Receive payment ']
 ${rec_pay_verify_keyword}    Receive payment
 ${input_user}    xpath://input[@placeholder='Type to search']

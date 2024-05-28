@@ -26,6 +26,23 @@ ${inst_no}    5
 ${fut_date}    30-05-2024     
 ${description}    Monthly Installments
 
+${Banking_title}    xpath://div[@class="side-menu-header"]//following-sibling::div
+${select_user}    xpath://div[@class="dropdown-menu show"]//a[1]
+${invalid_amount_error_msg}    xpath:div[class="invalid-feedback"]
+${Scheduling}    xpath://button[@title="Pay now"]
+${pay_now_option}    xpath://a[text()=' Pay now ']
+
+${exceed_max_payment_error_msg}    xpath://div[@class="notification-message"]
+${expected_error_msg}    You have exceeded the maximum of payments per day for the demo network
+
+${recurring_payment}    xpath://a[text()=" Recurring payments "]
+${click_process_every}    xpath:(//div[@class="w-100"])[2]//button
+${click_week}    xpath://a[text()=" Weeks "]
+${process_every_value}    xpath://input[@class="form-control text-right ng-valid ng-touched ng-dirty"]
+
+${cancel_recurring_payment}    xpath://div[text()='Cancel this recurring payment']
+${cancellation_status}    xpath://div[text()=" Canceled "]
+
 *** Keywords ***
 
 Select the option payment to user
@@ -47,6 +64,10 @@ verify the error message for user to field is given blank
 
 verify the error message for amount field is given blank
     Element Text Should Be    ${amount_error_msg}     This field is required
+
+verify exceeded amount is entered
+    Wait Until Element Is Visible    ${invalid_amount_error_msg}
+    Element Text Should Be    ${invalid_amount_error_msg}     Amount must be less or equal to 500,00 IU's.
 
 Enter the valid amount in the amount field
     [Arguments]    ${amount_data}
@@ -87,3 +108,29 @@ Click the confirm button in the payment page
 verify the succesfull payment notification
     Wait Until Element Is Visible    ${successfull_payment_msg}
     Element Text Should Be    ${successfull_payment_msg}    The payment was successfully processed
+
+verify the exceed maximun payment error message is dispalyed
+    Wait Until Element Is Visible    ${exceed_max_payment_error_msg}
+    ${actual_error_msg}    Get Text    ${exceed_max_payment_error_msg}
+    Should Be Equal    ${actual_error_msg}    ${expected_error_msg}
+
+Select the Recurring payment option
+    Click Element    ${recurring_payment}
+
+Click the process every dropdown list
+    Click Element    ${click_process_every}
+
+Select the week in process every dropdown list
+    Click Element    ${click_week}
+
+
+
+Click Cancel the recurring payment
+    Wait Until Element Is Visible    ${cancel_recurring_payment}
+    Click Element    ${cancel_recurring_payment}
+    Click Element    ${confirm_button}
+
+verify the cancellation status
+    Wait Until Element Is Visible     ${cancellation_status}
+    Element Text Should Be    ${cancellation_status}    Canceled    
+
