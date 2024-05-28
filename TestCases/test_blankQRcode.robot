@@ -14,11 +14,10 @@ ${blank_description}
 
 *** Test Cases ***
 Validate Receive QR code with valid data    ${blank_amount}    ${blank_description}
-
+    [Tags]  smoke
 *** Keywords ***
 Validate the Receive QR code functionality with empty data
     [Documentation]    This checks the qr code with blank data
-    [Tags]  invalid_ReceiveQRCode
     [Arguments]    ${blank_amount}    ${blank_description}
     LoginResource.Fill the Login page
     HomeResource.Click the Banking Option

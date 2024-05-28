@@ -15,16 +15,16 @@ ${amount}
 ${description}
 
 *** Test Cases ***
-Validate Receive payment with data    ${blank_user}    ${amount}    ${description}
-
+Validate Receive payment with data        ${amount}
+    [Tags]  smoke
 *** Keywords ***
 Validate the Receive payment functionality with empty user data
     [Documentation]    This checks the Receive payment functionality with empty user data
-    [Tags]  invalid_Receive_payment
-    [Arguments]    ${blank_user}    ${amount}    ${description}
+    [Arguments]        ${amount}
     LoginResource.Fill the Login page
     HomeResource.Click the Banking Option
     HomeResource.Verify the Banking page is displayed
     ReceivePaymentResouce.Verify the Receive payment page
-    ReceivePaymentResouce.Fill the receive payment form with data    ${blank_user}    ${amount}    ${description}  
+    ReceivePaymentResouce.Fill the receive payment form with data    ${blank_user}    ${amount}
+    ReceivePaymentResouce.Click the next button
     ReceivePaymentResouce.verify user error message is displayed

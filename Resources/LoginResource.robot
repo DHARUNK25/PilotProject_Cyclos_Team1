@@ -8,7 +8,7 @@ ${login_button}    xpath:(//div[text()=' Login '])[1]
 ${username_locator}    css:input[placeholder="User"]
 ${password_locator}    css:input[placeholder="Password"]
 ${submit_btn}    xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]
-${username}    dharun
+${username}    demo
 ${password}    1234
 
 *** Keywords ***

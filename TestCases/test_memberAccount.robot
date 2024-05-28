@@ -9,9 +9,9 @@ Test Teardown    close Browser session
 
 
 *** Test Cases ***
-TC_001: Validate the Member Account
+Validate the Member Account
     [Documentation]     validate the balance and transaction
-    [Tags]    member_account
+    [Tags]   smoke
     LoginResource.Fill the Login page
     HomeResource.Click the Banking Option
     HomeResource.Verify the Banking page is displayed
