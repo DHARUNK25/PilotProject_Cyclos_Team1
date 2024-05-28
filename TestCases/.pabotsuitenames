@@ -1,9 +1,0 @@
-datasources:05c4beb358b55449e763172701cd52a3d34c7ff7
-commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
-suitesfrom:no-suites-from-option
-file:de3ffbdfa998047b19836db0914fefce62f1a1ff
---test Test Payment To User.To validate payment to user functionality with valid amount
---test Test Payment To User.To validate payment to user functionality with invalid amount
---test Test Payment To User.To validate payment to user functionality with blank fields
---test Test Payment To User.To validate payment to user functionality with user to field is given blank
---test Test Payment To User.To validate payment to user functionality with amount field is given blank
